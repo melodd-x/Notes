@@ -1,0 +1,22 @@
+.title{
+    font-size: 20px;
+    margin-top: 30px;
+    color: gray;
+    background-color: #f9f0f0;
+}
+.left,
+.right{
+    width: 550px;
+    padding-left: 0;
+    padding-right: 0;
+    float: left;
+}
+
+.right{
+    /*float:right;*/
+    margin-left: 39px;
+}
+.tableone{
+    height: 548px;
+    overflow: auto;
+}

@@ -1,0 +1,532 @@
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.bg{
+    width: 1280px;
+    height: 1040px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,82bffb+0,fcfcfc+51,ffffff+100 */
+    background: rgb(30,87,153); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(130,191,251,1) 0%, rgba(252,252,252,1) 51%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(130,191,251,1) 0%,rgba(252,252,252,1) 51%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(130,191,251,1) 0%,rgba(252,252,252,1) 51%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+    background-repeat: repeat-x;
+
+}
+.bg .container{
+    margin: 0 auto;
+    width: 956px;
+    height:100%;
+}
+.bg .container .header{
+    width: 100%;
+    height: 94px;
+}
+.bg .container .header .headerRight{
+    margin-top: 38px;
+    float: right;
+    font-size: 13px;
+    letter-spacing: -1px;
+}
+.bg .container .header .headerRight ul{
+    color: #e2e2e2;
+    cursor: pointer;
+}
+.bg .container .header .headerRight ul li{
+    list-style: none;
+    display: inline-block;
+}
+.bg .container .header .headerRight ul li:nth-child(1) {
+    color: white;
+}
+.bg .container .header .headerRight .fankui{
+    margin-right: 20px;
+    margin-top: 8px;
+    text-align: right;
+    color: white;
+    cursor: pointer;
+}
+/*.bg .container .header .headerRight .fankui{*/
+/*!*margin-bottom: 0;*!*/
+/*}*/
+
+.bg .container .content{
+    width: 100%;
+    height: 946px;
+}
+/*左侧*/
+.bg .container .content .left{
+    float: left;
+    width: 191px;
+    height: 100%;
+    background: #e7f0f7;
+    border: 1px solid #c3d3df;
+    position: relative;
+}
+.bg .container .content .left .leftimg{
+    display: inline-block;
+    position: absolute;
+    top:-1px;
+}
+.bg .container .content .left .QQ{
+    width: 209px;
+    height: 80px;
+    margin-top: 30px;
+    cursor: pointer;
+    background:url("../img/QQ@2x.png") no-repeat;
+    background-size: 209px 80px;
+}
+.bg .container .content .left .YX{
+    width: 209px;
+    height: 80px;
+    margin-top: 3px;
+    cursor: pointer;
+    background:url("../img/ZH@2x.png") no-repeat;
+    background-size: 209px 80px;
+}
+/*选号码*/
+.bg .container .content .left .HM{
+    position: relative;
+    margin-top: 100px;
+    width: 186px;
+    height: 189px;
+    margin-left: 6px;
+    background:url("../img/index_icon_1.png") no-repeat 0 -250px;
+}
+.bg .container .content .left .HM #sstext{
+    position: absolute;
+    display: inline-block;
+    top: 43px;
+    left: 7px;
+    width: 134px;
+    height: 22px;
+    border: 0;
+}
+.bg .container .content .left .HM .fdj{
+    position: absolute;
+    top: 41px;
+    left: 145px;
+    width: 30px;
+    height: 26px;
+}
+.bg .container .content .left .HM .fdj:hover{
+    background:url("../img/index_icon_1.png") no-repeat 0 -200px;
+}
+
+
+
+/*icon4*/
+.bg .container .content .left .HM ul{
+    position: absolute;
+    top: 85px;
+    left: 35px;
+}
+.bg .container .content .left .HM li{
+    list-style: none;
+    padding-top: 5px;
+}
+.bg .container .content .left .HM li a {
+    text-decoration: none;
+    color: #7a7a7a;
+    font-size: 10px;
+    height: 20px;
+}
+.bg .container .content .left .HM li a:hover{
+    color: #59afe4;
+}
+.bg .container .content .left .HM li a .srt{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background:url("../img/ipt.png") no-repeat;
+    background-position-x: -267px;
+    background-position-y: -74px;
+    vertical-align: middle;
+    /*background:url("../img/index_icon_1.png") no-repeat -312px -451px;*/
+
+}
+.bg .container .content .left .HM li .sr:hover .srt{
+    background:url("../img/index_icon_1.png") no-repeat -310px -452px;
+}
+
+/*爱情*/
+.bg .container .content .left .HM li a .aqt{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background:url("../img/ipt.png") no-repeat;
+    background-position-x: -267px;
+    background-position-y: -101px;
+    vertical-align: middle;
+    /*background:url("../img/index_icon_1.png") no-repeat -310px -463px;*/
+
+}
+.bg .container .content .left .HM li .aq:hover .aqt{
+    background:url("../img/index_icon_1.png") no-repeat -311px -541px;
+}
+/*手机*/
+.bg .container .content .left .HM li a .sjt{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background:url("../img/ipt.png") no-repeat;
+    background-position-x: -268px;
+    background-position-y: -184px;
+    vertical-align: middle;
+
+    /*background:url("../img/index_icon_1.png") no-repeat -310px -507px;*/
+
+}
+.bg .container .content .left .HM li .sj:hover .sjt{
+    background:url("../img/index_icon_1.png") no-repeat -311px -510px;
+}
+/*年度*/
+.bg .container .content .left .HM li a .ndt{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background:url("../img/ipt.png") no-repeat;
+    background-position-x: -267px;
+    background-position-y: -152px;
+    /*background:url("../img/index_icon_1.png") no-repeat -312px -429px;*/
+
+}
+.bg .container .content .left .HM li .nd:hover .ndt{
+    background:url("../img/index_icon_1.png") no-repeat -310px -422px;
+}
+
+
+
+
+
+
+    /*右侧*/
+.bg .container .content .right{
+    float: left;
+    width: 762px;
+    height: 100%;
+    background: #f8fdff;
+    border-top: 1px solid #c3d3df;
+    border-right: 1px solid #c3d3df;
+    border-bottom: 1px solid #c3d3df;
+}
+/*大图*/
+.bg .container .content .right .top{
+    margin-left: 75px;
+    margin-top: 30px;
+}
+/*注册标题*/
+.bg .container .content .right .center{
+    height: 35px;
+    width: 604px;
+    margin-left: 75px;
+    margin-top: 40px;
+    border-bottom: 1px solid #c3d3df;
+}
+.bg .container .content .right .center .zhuce{
+    height: 25px;
+    width: 100px;
+    border-left: 3px solid #59afe4;
+    padding-top: 3px;
+    padding-left: 5px;
+    color: #616161;
+}
+
+/*表单验证*/
+.bg .container .content .right .form{
+    margin-top: 20px;
+    width: 760px;
+    height: 593px;
+}
+
+.bg .container .content .right .form .text{
+    width: 189px;
+    display: inline-block;
+    text-align: right;
+    margin-right: 5px;
+}
+/*input输入框样式*/
+.bg .container .content .right .form #intname,#intpassword,#intpasswordagain,#intiphone,#intdq{
+    display: inline-block;
+    width: 290px;
+    height: 35px;
+    border: 1px solid #c3d3df;
+    box-shadow: 0 0 1px 1px #c3d3df inset;
+    border-radius: 4px;
+    background: #ffffff;
+    padding-left: 10px;
+    
+}
+.bg .container .content .right .form #youxiang{
+    position: relative;
+}
+/*邮箱输入框*/
+.bg .container .content .right .form #intyouxiang{
+    width: 290px;
+    height: 35px;
+    border: 1px solid #c3d3df;
+    box-shadow: 0 0 1px 1px #c3d3df inset;
+    border-radius: 4px;
+    background: #ffffff;
+    padding-left: 10px;
+}
+/*//邮箱提示*/
+.bg .container .content .right .form .text3{
+    position: absolute;
+    width: 230px;
+    height: 35px;
+    display: inline-block;
+    color: #757177;
+    font-size: 7px;
+    margin-left: 10px;
+    top: 1px;;
+}
+.bg .container .content .right .form .text3 a{
+    text-decoration: none;
+    color: #59afe4;
+}
+/*密码提示*/
+.bg .container .content .right .form #mimatishi{
+    width: 159px;
+    height: 78px;
+    background:url("../img/mima2.png") no-repeat;
+    background-size: 159px 78px;
+}
+.bg .container .content .right .form #mimatishi p{
+    font-size: 10px;
+    /*line-height: 25px;*/
+    margin-left: 15px;
+    margin-top: 7px;
+}
+
+/*生日*/
+.bg .container .content .right .form .sr1{
+    display: inline-block;
+    width: 72px;
+    height: 23px;
+    border: 1px solid #c3d3df;
+    box-shadow: 0 0 1px 1px #c3d3df inset;
+    border-radius: 4px;
+    background: #F3F9FC;
+    padding-left: 10px;
+}
+/*所在地*/
+.bg .container .content .right .form #guojia,#sheng,#shi{
+    display: inline-block;
+    width: 97px;
+    height: 23px;
+    border: 1px solid #c3d3df;
+    box-shadow: 0 0 1px 1px #c3d3df inset;
+    border-radius: 4px;
+    background: #F3F9FC;
+    padding-left: 10px;
+    /*margin-left: 5px;*/
+}
+.bg .container .content .right .form .text2{
+    width: 230px;
+    display: inline-block;
+    color: #757177;
+    font-size: 7px;
+    margin-left: 10px;
+    position: relative;
+}
+/*密码强度*/
+.bg .container .content .right .form .text2 .qiangdu{
+    position: absolute;
+    top: -22px;
+    display: none;
+}
+
+.bg .container .content .right .form .text2 .qiangdu1{
+    font-size: 10px;
+    padding-left: 70px;
+    height: 15px;
+    width: 40px;
+    color:orange;
+    background:url("../img/pwd_sprite.png") no-repeat;
+    background-position: 0 -99px;
+}
+.bg .container .content .right .form .text2 .qiangdu2{
+    font-size: 10px;
+    height: 15px;
+    width: 170px;
+}
+
+.bg .container .content .right .form #youxiang{
+    display: none;
+}
+
+.bg .container .content .right .form .text2 #mimatishi{
+    position: absolute;
+    top: -41px;
+    left: -6px;
+    display: none;
+}
+.bg .container .content .right .form .kong{
+    width: 100%;
+    height: 15px;
+}
+.bg .container .content .right .form .sex{
+    font-size: 8px;
+    color: #84a8c8;
+    margin-right: 20px;
+}
+/*地区*/
+/*.bg .container .content .right .form .browser{*/
+    /*width: 300px;*/
+    /*height: 20px;*/
+    /*border: 1px solid #c3d3df;*/
+    /*box-shadow: 0 0 1px 1px #c3d3df inset;*/
+    /*border-radius: 4px;*/
+    /*background: #ffffff;*/
+/*}*/
+
+.bg .container .content .right .form .intdqyc{
+    display: none;
+}
+/*提示*/
+.bg .container .content .right .form .tishi {
+    margin-left: 200px;
+}
+.bg .container .content .right .form .tiship {
+    font-size: 10px;
+    color: gray;
+}
+.bg .container .content .right .form .tiship .dianjizheli{
+    color: #84a8c8;
+    text-decoration: none;
+}
+/*短信验证码*/
+.bg .container .content .right .form .intmessageyc{
+    margin-left: 200px;
+    display: none;
+}
+.bg .container .content .right .form .intmessageyc #intmessage {
+    display: inline-block;
+    width: 165px;
+    height: 35px;
+    border: 1px solid #c3d3df;
+    box-shadow: 0 0 1px 1px #c3d3df inset;
+    border-radius: 4px;
+    background: #ffffff;
+    padding-left: 10px;
+}
+.bg .container .content .right .form .intmessageyc .btnmessage {
+    width: 115px;
+    height: 35px;
+    border-radius: 3px;
+    background: #F3F9FC;
+    margin-left: 5px;
+    border: 1px solid #c3d3df;
+    font-size: 14px;
+}
+/*手机掩藏*/
+/*.bg .container .content .right .form #shouji{*/
+    /*display: none;*/
+/*}*/
+
+
+    /*验证码*/
+.bg .container .content .right .form .btnyz{
+    /*display: inline-block;*/
+    width: 305px;
+    height: 50px;
+    border: 1px solid #c3d3df;
+    /*box-shadow: 0 0 1px 1px #c3d3df inset;*/
+    border-radius: 4px;
+    background: #ffffff;
+    font-size: 16px;
+    position: relative;
+}
+.bg .container .content .right .form .btnyz p{
+    padding-left: 42px;
+    text-align: left;
+}
+
+.bg .container .content .right .form .btnyz img{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.bg .container .content .right .form #yz{
+    display: none;
+}
+
+
+
+
+/*立即注册*/
+.bg .container .content .right .form #intsubmit{
+    margin-left: 200px;
+    width: 302px;
+    height: 50px;
+    background: #69b946;
+    color: white;
+    border: 1px solid white;
+    border-radius: 3px;
+    font-size: 19px;
+
+}
+/*条款*/
+.bg .container .content .right .form .inttk{
+    margin-left: 200px;
+}
+.bg .container .content .right .form .inttkl1,.inttkl2{
+    font-size: 7px;
+    cursor: pointer;
+}
+/*条款隐藏内容*/
+.bg .container .content .right .form .inttk .tkyc{
+    display: inline-block;
+    position: relative;
+}
+.bg .container .content .right .form .inttk .tkyc1{
+    width: 18px;
+    text-align: center;
+    line-height: 10px;
+    cursor: pointer;
+}
+.bg .container .content .right .form .inttk .tkyc2{
+    width: 150px;
+    height: 66px;
+    position: absolute;
+    left: 0;
+    top: 12px;
+    display: none;
+    border: 1px solid #84a8c8;
+    cursor: pointer;
+    padding: 6px 10px;
+}
+.bg .container .content .right .form .inttk .tkyc2 .bai{
+    width: 18px;
+    height: 1px;
+    background: #f7fcfd;
+    position: absolute;
+    top: -1px;
+    left: 0;
+}
+.bg .container .content .right .form .inttk .tkyc2 a{
+    color: #4390c8;
+    text-decoration: none;
+    font-size: 10px;
+
+}
+    /*页脚*/
+.footer{
+    margin: 0 auto;
+    width: 956px;
+    height: 55px;
+    text-align: center;
+}
+.footer p{
+    line-height: 55px;
+    color: #9f9f9f;
+    font-size: 13px;
+}

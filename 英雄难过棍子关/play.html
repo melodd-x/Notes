@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>英雄难过棍子关</title>
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <link href="css/style.css" rel="stylesheet"/>
+  <!--<script src="js/index.js"></script>-->
+  <script src="js/date.js"></script>
+     <script>
+         $(function () {
+
+             function initValue(val) {
+                 var wellW=$(".well-box .well:eq("+val+")").width();
+                 var wellL=parseInt($(".well-box .well:eq("+val+")").css("left"));
+                 $(".stick").css("left",(wellW+wellL)+"px");
+                 $(".man").css("left",(wellW+wellL-65)+"px");
+                 $(".stick").width(0);
+                 $(".stick").removeClass("stickDown");
+                 $(".man img").removeClass("rotate");
+                 type=true;
+                 index=val;
+             }
+
+
+
+             createWell(2);
+             initValue(0);
+
+
+             var type=true;
+             $(".btnClick").mousedown(function () {
+                 if (type){
+                     var contop=$(".container").offset().top;
+                     $(".stick").animate({"width":contop+"px"},1000);
+                 }
+             }).mouseup(function () {
+                 $(".stick").stop();
+                 $(".stick").addClass("stickDown");
+                 if(type){
+                     setTimeout(running,350);
+                 }
+                type=false;
+             });
+
+             var index=0;
+
+             function running() {
+                 $(".man img").attr("src","img/stick.gif");
+                 var stickWidth=$(".stick").width();
+                 var stickLeft=parseInt($(".stick").css("left"));
+
+                 var wellWidth=$(".well-box .well:eq("+index+")").width();
+                 var wellLeft=parseInt($(".well-box .well:eq("+index+")").css("left"));
+                 var nWellLeft=parseInt($(".well-box .well:eq("+index+")").next().css("left"));
+                 var nWellWidth=$(".well-box .well:eq("+index+")").next().width();
+
+                $(".man").animate({"left":(stickWidth+stickLeft-35)+"px"},1000,function () {
+                    $(".man img").attr("src","img/stick_stand.png");
+                    if(stickWidth<nWellLeft-wellWidth-wellLeft||stickWidth>nWellLeft-wellWidth-wellLeft+nWellWidth
+                    ){
+                        $(".man img").addClass("rotate");
+                        setTimeout(fail,500);
+                    }else {
+//                        alert("成功");
+                        index++;
+                        initValue(index);
+
+                        $(".container").animate({"left":(0-nWellLeft)+"px"},1000);
+                        if (index==$(".well-box .well").length-1){
+                            //                        alert("成功");
+                            infoData.successDialog();
+                            initValue(0);
+                            $(".container").css("left","0px");
+                        }
+                    }
+                });
+             }
+
+
+             function fail() {
+//                 alert("失败");
+//                 window.location.reload();
+                 infoData.failDialog();
+                 initValue(0);
+             }
+
+
+//随机墙
+             function createWell(num) {
+                 var left=0;
+                 var width=100;
+                 var sep=100;
+                 for(var i=0;i<num;i++){
+                     var div=$("<div></div>");
+                     div.addClass("well");
+                     var max=$(".container").offset().top;
+                     var min=65;
+                     width=parseInt(Math.random()*(max-min+1)+min);
+                     div.css({"left":+left+"px","width":+width+"px"});
+                     $(".well-box").append(div);
+//                     max=$(".container").offset().top;
+                     min=20;
+                     sep=parseInt(Math.random()*(max-min+1)+min);
+                     left+=width+sep;
+                 }
+
+
+             }
+
+         })
+     </script>
+ </head>
+ <body class="bg2">
+	<div class="set-text">
+		<h2 class="play-title">关卡1</h2>
+		<a href="index.html">主菜单</a>
+	</div>
+	<a href="javascript:void(0);" class="btnClick"></a>
+	<div class="container">
+		<div class="stick"></div>
+		<div class="man"><img src="img/stick_stand.png"/></div>
+		<div class="well-box">
+			<!--<div class="well" style="left: 0px; width: 100px"></div>-->
+			<!--<div class="well" style="left: 200px; width: 100px"></div>-->
+			<!--<div class="well" style="left: 400px; width: 100px"></div>-->
+			<!--<div class="well" style="left: 600px; width: 100px"></div>-->
+		</div>
+	</div>
+ </body>
+</html>

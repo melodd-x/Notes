@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<select name="name" id="guojia" >
+    <option value="中国">中国</option>
+    <option value="日本">日本</option>
+    <option value="美国">美国</option>
+</select>
+
+<select name="name" id="sheng" >
+    <option value="北京">北京</option>
+</select>
+<select name="name" id="shi" >
+    <option value="东城">东城</option>
+</select>
+
+<script>
+    var datas  = {"中国":["北京","上海","广东"],
+        "日本":["本州岛","四州岛","九州岛"],
+        "美国":["德州","夏威夷","纽约州"]};
+    var datas2  = {
+        "北京":["东城","海定","朝阳"],
+        "上海":["浦东","浦西","五环外"],
+        "广东":["深圳","佛手","广州"],
+        "本州岛":["东京","西京","大板"],
+        "四州岛":["四洲中","三环","一环"],
+        "九州岛":["东边","西边","北边"],
+        "德州":["湖人","火箭","西边"],
+        "夏威夷":["北岛","中岛","南岛"],
+        "纽约州":["中心","郊区","地下"]
+    };
+
+    var guojia = document.getElementById("guojia");
+    var sheng   = document.getElementById("sheng");
+    var shi = document.getElementById("shi");
+
+    function addOptions(dom,child, array) {
+        dom.addEventListener("change",function () {
+
+            if (array[this.value] != "undefined"){
+                var arra = array[this.value];
+                child.innerHTML = "";
+                var myOption  = "";
+                arra.forEach(function (item) {
+                    myOption += '<option value='+item+'>'+item+'</option>';
+                });
+                child.innerHTML = myOption;
+            }
+        })
+    }
+
+    addOptions(guojia,sheng,datas);
+    addOptions(sheng,shi,datas2);
+
+</script>
+</body>
+</html>

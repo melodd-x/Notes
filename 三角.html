@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style media="screen">
+        #box{
+            width: 300px;
+            height: 300px;
+            border: 1px solid #000;
+            margin: 0 auto;
+        }
+        .sanjiao{
+            margin: 0 auto;
+            margin-top: 75px;
+            width: 0;
+            height: 0;
+            border-top: 50px solid rgba(223, 54, 54, 0);
+            border-left: 50px solid rgba(26, 238, 181, 0);
+            border-bottom: 50px solid #4d36df;
+            border-right: 50px solid rgba(120, 231, 33, 0);
+            animation: san 1s linear ;
+        }
+        @keyframes san {
+            0%{transform: rotate(0deg);}
+            100%{transform: rotate(360deg);}
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div class="sanjiao"></div>
+    </div>
+
+</body>
+</html>

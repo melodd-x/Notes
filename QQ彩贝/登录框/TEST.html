@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TEST</title>
+    <script src="jquery-3.1.1.min.js"></script>
+    <style>
+        *{margin: 0;padding: 0}
+        button{
+            width: 100px;
+            height: 30px;
+            margin-top: 100px;
+            margin-left: 1000px;
+
+        }
+
+        .login{
+            color: #5e5e5e;
+            width: 370px;
+            height: 305px;
+            margin: 0 auto;
+            border: 1px solid #909090;
+            border-radius: 3px;
+            box-shadow: 2px 2px 4px 0 #ababab;
+            position: relative;
+        }
+        .loginX{
+            width: 47px;
+            height: 23px;
+            position: absolute;
+            text-align: center;
+            padding-top: 3px;
+            right: 0;
+            box-sizing: border-box;
+            border-left: 1px solid rgba(225, 225, 225, 0.64);
+            background: white;
+        }
+        .loginX:hover{
+            color: white;
+            background: #fc3f32;
+            background: -moz-linear-gradient(top, #FC3F32 0%, #FFFFFF 100%, #FFFFFF 100%, #FFFFFF 100%, #FFFFFF 101%);
+            background: -webkit-linear-gradient(top, #FC3F32 0%,#FFFFFF 100%,#FFFFFF 100%,#FFFFFF 100%,#FFFFFF 101%);
+            background: linear-gradient(to bottom, #FC3F32 0%,#FFFFFF 100%,#FFFFFF 100%,#FFFFFF 100%,#FFFFFF 101%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc3f32', endColorstr='#ffffff',GradientType=0 );
+        }
+        .loginH{
+            text-align: center;
+            margin-top: 15px;
+            font-size: 22px;
+            color: black;
+        }
+        .loginP{
+            font-size: 16px;
+            text-align: center;
+            margin-top: 10px;
+            line-height: 25px;
+            letter-spacing:-1px;
+        }
+        .loginPA{
+            text-decoration: none;
+            color: #2789e4;
+        }
+        .loginImg{
+            margin: 20px auto;
+            width: 134px;
+            height: 134px;
+            background:url("login@2x.png") no-repeat;
+            background-size:134px;
+        }
+        .login ul{
+            margin-top: -8px;
+            margin-left: 140px;
+        }
+        .login ul li{
+            letter-spacing: -1px;
+            font-size: 14px;
+            list-style-type: none;
+            display: inline-block;
+        }
+        .login ul li a{
+            text-decoration: none;
+            color: #5e5e5e;
+        }
+        .login ul li a:hover{
+            text-decoration: underline;
+
+        }
+
+
+        .login2{
+            color: #5e5e5e;
+            width: 370px;
+            height: 305px;
+            margin: 0 auto;
+            border: 1px solid #909090;
+            border-radius: 3px;
+            box-shadow: 2px 2px 4px 0 #ababab;
+            position: relative;
+            display: none;
+        }
+        .login2Input{
+            width: 272px;
+            height: 40px;
+            margin-top: 10px;
+            margin-left: 50px;
+            border: 1px solid #dfdfdf;
+            border-radius: 2px;
+            padding-left: 10px;
+            box-sizing: border-box;
+        }
+        #login2Btn{
+            background: #8dc95a;
+            color: white;
+            font-size: 18px;
+            width: 272px;
+            height: 42px;
+            margin-top: 10px;
+            margin-left: 50px;
+            border: 1px solid #dfdfdf;
+            padding-left: 10px;
+            box-sizing: border-box;
+        }
+        .login2 ul{
+            margin-top: 20px;
+            margin-left: 150px;
+        }
+        .login2 ul li{
+            letter-spacing: -1px;
+            font-size: 14px;
+            list-style-type: none;
+            display: inline-block;
+        }
+        .login2 ul li a{
+            text-decoration: none;
+            color: #5e5e5e;
+        }
+        .login2 ul li a:hover{
+            text-decoration: underline;
+
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    <button class="btn">用户登录</button>
+    <div class="login">
+        <div class="loginX">X</div>
+        <p class="loginH">快速安全登录</p>
+        <p class="loginP">请使用<a href="javascript:void (0)" class="loginPA">QQ手机版</a>二维码扫描二维码，<br>安全登录，防止盗号。</p>
+        <div class="loginImg"></div>
+        <ul>
+            <li><a href="javascript:void (0)" class="tiaozhuang1">帐号密码登录</a>&nbsp;</li>|
+            <li><a href="http://www.baidu.com" class="tiaozhuang2">注册新帐号</a>&nbsp;</li>|
+            <li><a href="javascript:void (0)">意见反馈</a></li>
+        </ul>
+    </div>
+    <div class="login2">
+        <p class="loginH">帐号密码登录</p>
+        <p class="loginP">推荐使用<a href="" class="loginPA">快速安全登录</a>,二维码扫描二维码。</p>
+        <br>
+        <input type="text" class="login2Input" placeholder="支持QQ号/邮箱/手机号登录">
+        <input type="text" class="login2Input" placeholder="密码">
+        <input type="button"  id="login2Btn"  value="登录">
+
+        <ul>
+            <li><a href="javascript:void (0)">忘了密码? </a>&nbsp;</li>|
+            <li><a href="http://www.baidu.com" class="tiaozhuang2">注册新帐号 </a>&nbsp;</li>|
+            <li><a href="javascript:void (0)">意见反馈</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    $(function () {
+        $(".tiaozhuang1").click(function () {
+            $(".login").hide();
+            $(".login2").show();
+        });
+        $(".loginPA").click(function () {
+            $(".login2").hide();
+            $(".login").show();
+        })
+
+    })
+</script>
+</html>

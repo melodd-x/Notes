@@ -1,0 +1,126 @@
+*{margin: 0;padding: 0}
+body,html{
+    font-family:GB18030Bitmap;
+}
+body{
+    /*background-color: #10ceff;*/
+}
+/*button{*/
+    /*width: 100px;*/
+    /*height: 30px;*/
+    /*margin: 10px 580px;*/
+    /*color: #BC8F8F;*/
+/*}*/
+
+/*.ps{*/
+    /*!*position: absolute;*!*/
+    /*width: 190px;*/
+    /*height: 200px;*/
+    /*margin-top: 200px;*/
+    /*margin-left: 110px;*/
+    /*!*background-color: gray;*!*/
+    /*opacity: 0.5;*/
+    /*float: left;*/
+/*}*/
+.start{
+    width: 416px;
+    height: 416px;
+    margin-top: 50px;
+    margin-left: 432px;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 16px 0px #605759;
+    display: block;
+    float: left;
+}
+.start p{
+    font-size: 20px;
+    color: #393939;
+    text-align: center;
+}
+.start img{
+    display: inline-block;
+    margin-left: 60px;
+    margin-top: 59px;
+}
+
+
+.main{
+    width: 416px;
+    height: 416px;
+    margin-top: 50px;
+    margin-left: 432px;
+    border: 1px solid #b6bcbd;
+    background-color: #b6bcbd;
+    box-shadow: 0px 8px 16px 0px #605759;
+    display: none;
+    float: left;
+}
+
+.main div{
+    width: 100px;
+    height: 100px;
+    margin: 1px 1px;
+    float: left;
+    text-align: center;
+    line-height: 100px;
+    border: 1px solid #d5d5d5;
+
+}
+
+.bg{  background-color: #d5d5d5;  }
+
+.bg2{  background-color: #eee4da; color: #7c736a; font-size: 50px;line-height: 100px  }
+.bg4{  background-color: #ece0c8; color: #7c736a; font-size: 50px;line-height: 100px }
+
+.bg8{  background-color: #f2b179; color: #fff7eb; font-size: 50px;line-height: 100px  }
+.bg16{  background-color: #f59563; color: #fff7eb; font-size: 50px;line-height: 100px  }
+.bg32{  background-color: #f57c5f; color: #fff7eb; font-size: 50px;line-height: 100px  }
+.bg64{  background-color: #f65d3b; color: #fff7eb; font-size: 50px;line-height: 100px  }
+
+.bg128{  background-color: #edce71; color: #fff7eb; font-size: 60px;line-height: 100px  }
+.bg256{  background-color: #b99a58; color: #fff7eb; font-size: 55px;line-height: 100px  }
+.bg512{  background-color: #745f29; color: #fff7eb; font-size: 60px ;line-height: 100px }
+
+.bg1024{  background-color: #4a3c1b; color: #fff7eb; font-size: 40px;line-height: 100px  }
+.bg2048{  background-color: #1d170b; color: #fff7eb; font-size: 40px;line-height: 100px  }
+
+
+.win{
+    width: 416px;
+    height: 416px;
+    margin: 50px auto;
+    box-shadow: 0px 8px 16px 0px #605759;
+    display: none;
+}
+.los{
+    position: relative;
+    width: 417px;
+    height: 416px;
+    margin-top: 50px;
+    margin-left: 432px;
+    box-shadow: 0px 8px 16px 0px #605759;
+    display: none;
+    background-color: gray;
+    opacity:0.5;
+}
+.losp1{
+    font-size: 50px;
+    color: red;
+    position: absolute;
+    margin-top: 120px;
+    margin-left: 50px;
+}
+.losp2{
+    font-size: 50px;
+    color: red;
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 110px;
+}
+.losp3{
+    font-size: 15px;
+    color: red;
+    position: absolute;
+    margin-top: 390px;
+    margin-left: 370px;
+}

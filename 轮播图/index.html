@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../jquery-3.1.1.min.js" charset="utf-8"></script>
+    <title>Document</title>
+    <style media="screen">
+        *{margin: 0;padding: 0}
+        .div1{
+            width: 750px;
+            height: 550px;
+            margin: auto;
+            position: relative;
+        }
+        .div2{
+            width: 130px;
+            height: 24px;
+            position: absolute;
+            top:500px;
+            left: 300px;
+        }
+        .div2 ul li{
+            list-style: none;
+            display: inline-block;
+            width: 20px;
+            background-color: gray;
+            color: white;
+            text-align: center;
+            border-radius: 50%;
+            font-size: 12px;
+        }
+        .div2 ul .p1{
+            background-color: red;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="focus.jpg" />
+        <img src="focus1.jpg"  style="display: none"/>
+        <img src="focus2.jpg"  style="display: none"/>
+        <img src="focus3.jpg"  style="display: none"/>
+        <img src="focus4.jpg"  style="display: none"/>
+        <div class="div2">
+            <ul>
+                <li class="p1">1</li>
+                <li class="p2">2</li>
+                <li class="p3">3</li>
+                <li class="p4">4</li>
+                <li class="p5">5</li>
+            </ul>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            var i=0;
+            var setTime=null;
+            var lunbo=function () {
+                $("img:eq("+i+")").hide();
+                $(".div2 li:eq("+i+")").css({
+                    color:"white",
+                    backgroundColor:"gray"
+                });
+                i++;
+                if (i==5){
+                    i=0;
+                }
+                $("img:eq("+i+")").show();
+                 $(".div2 li:eq("+i+")").css({
+                   color:"black",
+                   backgroundColor:"red"
+                 });
+                setTime=setTimeout(lunbo,1000);
+            };
+            setTime=setTimeout(lunbo,1000);
+
+            //鼠标移入移出
+            $("img").mouseover(function () {
+                clearTimeout(setTime);
+            });
+            $("img").mouseout(function () {
+                setTime=setTimeout(lunbo,1000);
+            })
+
+            //li单击事件
+            $(".div2 li").click(function () {
+                var n=$(".div2 li").index(this);
+                $("img").css("display","none");
+                $(".div2 li").css({
+                    color:"white",
+                    backgroundColor:"gray"
+                });
+                $("img:eq("+n+")").css("display","block");
+                $(".div2 li:eq("+n+")").css({
+                    color:"block",
+                    backgroundColor:"red"
+                });
+                i=n;
+            });
+
+        })
+    </script>
+</body>
+</html>

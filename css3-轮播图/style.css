@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    padding-top: 50px;
+}
+.container{
+    height: 320px;
+    width: 512px;
+    margin: 0 auto;
+    border: 1px solid #a69d9d;
+    padding: 6px;
+    border-radius: 3px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, .5);
+    overflow: hidden;
+ 
+
+
+}
+.wrap{
+    position: relative;
+}
+ul{
+    list-style: none;
+}
+ul li{
+    position: absolute;
+}
+.info{
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+    background: rgba(0, 0, 0, .3);
+    padding: 6px 10px;
+    font-size: 20px;
+    color: #fff;
+}
+ul li:nth-child(1){
+    z-index: 0;
+    animation-name: pic1;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+ul li:nth-child(2){
+    z-index: -1;
+    animation: pic2 25s linear infinite;
+}
+ul li:nth-child(3){
+    z-index: -1;
+    animation: pic3 25s linear infinite;
+}
+ul li:nth-child(4){
+    z-index: -1;
+    animation: pic4 25s linear infinite;
+}
+ul li:nth-child(5){
+    z-index: -1;
+    animation: pic5 25s linear infinite;
+}
+@keyframes pic1 {
+    0%{left: 0;}
+    4%{left: 0;}
+    16%{left: 0; opacity: 1; z-index: 0;}
+    /*用一秒时间出去*/
+    20%{left: 512px; opacity: 0; z-index: 0;}
+    21%{left: -512px; opacity: 0; z-index: -1;}
+    /*回到下次将要使用的初试位置*/
+    92% {left: -512px;opacity: 0;z-index: 0;}
+    96% {left: -512px;opacity: 1;z-index: 0;}
+    100%{left: 0; opacity: 1; z-index: 0;}
+}
+@keyframes pic2{
+	0%{left:-512px;opacity: 0;}
+	16%{left:-512px;opacity: 0;}
+	20%{left:0;opacity: 1;z-index: 0;}
+	24%{left:0;opacity: 1;z-index: 0;}
+	36%{left:0;opacity: 1;z-index: 0;}
+	40%{left:512px;opacity: 0;z-index: 0;}
+	41%{left:-512px;opacity: 0;z-index: -1;}
+	100%{left:-512px;opacity: 0;z-index: -1;}
+}
+@keyframes pic3{
+	0%  { left: -512px; opacity: 0; }
+   36% { left: -512px; opacity: 0; }
+   40% { left: 0px; opacity: 1; }
+   44% { left: 0px; opacity: 1; }
+   56% { left: 0px; opacity: 1; }
+   60% { left: 512px; opacity: 0; z-index: 0; }
+   61% { left: -512px; opacity: 0; z-index: -1; }
+   100%{ left: -512px; opacity: 0; z-index: -1; }
+}
+@keyframes pic4 {
+   0%  { left: -512px; opacity: 0; }
+   56% { left: -512px; opacity: 0; }
+   60% { left: 0px; opacity: 1; }
+   64% { left: 0px; opacity: 1; }
+   76% { left: 0px; opacity: 1; z-index: 0; }
+   80% { left: 512px; opacity: 0; z-index: 0; }
+   81% { left: -512px; opacity: 0; z-index: -1; }
+   100%{ left: -512px; opacity: 0; z-index: -1; }
+}
+@keyframes pic5 {
+   0%  { left: -512px; opacity: 0; }
+   76% { left: -512px; opacity: 0; }
+   80% { left: 0px; opacity: 1; }
+   84% { left: 0px; opacity: 1; }
+   96% { left: 0px; opacity: 1; z-index: 0; }
+   100%{ left: 512px; opacity: 0; z-index: 0; }
+}
+
+.progress{
+    position: absolute;
+    width: 100%;
+    height: 15px;
+    top: 305px;
+    left: 0;
+    z-index: 100;
+    background: #947e7e;
+    transform-origin: left;
+    transform: scaleX(0);
+    animation: pro 25s linear infinite;
+
+}
+@keyframes pro {
+    /*静态显示的过程*/
+	0%,20%,40%,60%,80%,100%{
+		transform: scaleX(0);
+		opacity: 0;
+	}
+	/*即将开始*/
+	4%,24%,44%,64%,84%{
+		transform: scaleX(0);
+		opacity: 0;
+	}
+	/*等待停留的过程*/
+	16%,36%,56%,76%,96%{
+		transform: scaleX(1);
+		opacity: 1;
+	}
+	/*进度条完成，瞬间 回到原始状态*/
+	17%,37%,57%,77%,97%{
+		transform: scaleX(1);
+		opacity: 0;
+	}
+	/*完成轮回*/
+	18%,38%,58%,78%,98%{
+		transform: scaleX(0);
+		opacity: 0;
+	}
+}
+/*
+#forpic1:checked~.wrap ul li:nth-child(1),
+#forpic2:checked~.wrap ul li:nth-child(2),
+#forpic3:checked~.wrap ul li:nth-child(3),
+#forpic4:checked~.wrap ul li:nth-child(4),
+#forpic5:checked~.wrap ul li:nth-child(5){
+    z-index: 0;
+    opacity: 1;
+}*/

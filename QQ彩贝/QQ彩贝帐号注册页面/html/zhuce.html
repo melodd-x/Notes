@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QQ注册</title>
+    <link href="../css/zhuce.css" rel="stylesheet">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/iconfont.js"></script>
+    <script src="../js/zhuce.js"></script>
+</head>
+<body>
+    <div class="bg">
+        <div class="container">
+            <div class="header">
+                <a href="#"><img src="../img/logo@2x.png" alt="" width="289" height="94"></a>
+                <div class="headerRight">
+                    <ul>
+                        <li>简体中文&nbsp;</li>|
+                        <li>繁体中文&nbsp;</li>|
+                        <li>English&nbsp;</li>
+                    </ul>
+                    <p class="fankui"><img src="../img/fankui@2x.png" height="14" >意见反馈</p>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="left">
+                    <img class="leftimg" src="../img/leftimg@2x.png" width="187" height="14" alt="">
+                    <div class="QQ">
+                    </div>
+                    <div class="YX">
+                    </div>
+                    <div class="HM">
+                        <input id="sstext" type="text" placeholder="输入想要的4-10位数字">
+                        <div class="fdj"></div>
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0)" class="sr"><div class="srt"></div>生日</a>&nbsp;
+                                <a href="javascript:void(0)" class="aq"><div class="aqt"></div>爱情</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" class="sj"><div class="sjt"></div>手机</a>&nbsp;
+                                <a href="javascript:void(0)" class="nd"><div class="ndt"></div>年度</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+
+                <div class="right">
+                    <div class="top"><img src="../img/WX20170303-141235@2x.png" width="609" height="162"></div>
+                    <div class="center">
+                        <div class="zhuce">注册帐号</div>
+                    </div>
+                    <form class="form">
+                        <!--邮箱-->
+                        <div id="youxiang">
+                            <label class="text" for="intname">邮箱帐号</label>
+                            <input id="intyouxiang" type="text" name="user">
+                            <span class="text3">
+                            </span>
+                            <div class="kong"></div>
+                        </div>
+                        <!--昵称-->
+                        <label class="text" for="intname">昵称</label>
+                        <input id="intname" type="text" name="user">
+                        <span class="text2">请输入昵称</span>
+                        <div class="kong"></div>
+                        <!--密码-->
+                        <label class="text" for="intpassword">密码</label>
+                        <input id="intpassword" type="password" name="password">
+                        <span class="text2" >
+                            <div id="mimatishi">
+                                <p class="mimatishi1">
+                                    <svg class="icon" aria-hidden="true" id="mima1">
+                                        <use xlink:href="#icon-gantanhao"></use>
+                                    </svg>
+                                    长度为6-16个字符
+                                </p>
+                                <p class="mimatishi2">
+                                    <svg class="icon" aria-hidden="true" id="mima2">
+                                        <use xlink:href="#icon-gantanhao"></use>
+                                    </svg>
+                                    不能包含空格
+                                </p>
+                                <p class="mimatishi3">
+                                    <svg class="icon" aria-hidden="true"id="mima3">
+                                        <use xlink:href="#icon-gantanhao"></use>
+                                    </svg>
+                                    不能是9位一下纯数字
+                                </p>
+                            </div>
+                            <div class="qiangdu">
+                                <p class="qiangdu1">弱</p>
+                                <p class="qiangdu2">试试字母、数字、标点的组合吧</p>
+                            </div>
+                        </span>
+                        <div class="kong"></div>
+                        <!--确认密码-->
+                        <label class="text" for="intpassword">确认密码</label>
+                        <input id="intpasswordagain" type="password" name="password">
+                        <span class="text2"></span>
+                        <div class="kong"></div>
+                        <!--性别-->
+                        <label class="text">性别</label>
+                        <input id="intsexm" type="radio" checked name="sex">
+                        <label class="sex" for="intsexm">男</label>
+                        <input id="intsexw" type="radio" name="sex">
+                        <label class="sex" for="intsexw">女</label>
+                        <div class="kong"></div>
+                        <!--生日-->
+                        <label class="text">生日</label>
+                        <select id="gl" class="sr1">
+                            <option value="公历">公历</option>
+                            <option value="农历">农历</option>
+                        </select>
+                        <select id="nian" class="sr1">
+                            <option value="年代">年代</option>
+                            <option value="00后">00后</option>
+                            <option value="90后">90后</option>
+                            <option value="80后">80后</option>
+                        </select>
+                        <select id="yue" class="sr1">
+                            <option value="月份">月份</option>
+                            <option value="月初">月初</option>
+                            <option value="月中">月中</option>
+                            <option value="月末">月末</option>
+                        </select>
+                        <select id="ri" class="sr1">
+                            <option value="具体哪天">具体哪天</option>
+                            <option value="10号前">10号前</option>
+                            <option value="10-20号">10-20号</option>
+                            <option value="20-30号">20-30号</option>
+                        </select>
+                        <span class="text2"></span>
+                        <div class="kong"></div>
+                        <!--所在地-->
+                        <label class="text">所在地</label>
+                        <select id="guojia">
+                            <option value="中国">中国</option>
+                            <option value="日本">日本</option>
+                            <option value="美国">美国</option>
+                        </select>
+                        <select id="sheng">
+                            <option value="地区">地区</option>
+                        </select>
+                        <select id="shi">
+                            <option value="地区">地区</option>
+                        </select>
+                        <div class="kong"></div>
+                        <!--地区-->
+                        <div class="intdqyc">
+                            <label class="text">地区</label>
+                            <input list="dq" name="browser" class="browser" id="intdq">
+                            <datalist id="dq">
+                                <option value="中国 0086">
+                                <option value="台湾 00886">
+                                <option value="中国香港特别行政区 00852">
+                                <option value="中国澳门特别行政区 00853">
+                            </datalist>
+                            <div class="kong"></div>
+                        </div>
+
+                        <!--手机号码-->
+                        <div id="shouji">
+                            <label class="text" for="intiphone">手机号码</label>
+                            <input id="intiphone" type="text" name="user">
+                            <span class="text2"></span>
+                            <div class="kong"></div>
+                            <!--提示-->
+                            <div class="tishi">
+                                <p class="tiship">可通过该手机号码快速找回密码</p>
+                                <p class="tiship" id="tishiyc">中国大陆地区以外手机号码
+                                    <a href="javascript:void(0)" class="dianjizheli">点击这里</a></p>
+                            </div>
+                            <div class="kong"></div>
+                            <!--获取短信验证码-->
+                            <div class="intmessageyc">
+                                <input id="intmessage" type="text">
+                                <button class="btnmessage">获取短信验证码</button>
+                            </div>
+                            <div class="kong"></div>
+                        </div>
+                            <!--邮箱验证码-->
+                        <div id="yz">
+                            <label class="text">验证码</label>
+                            <button class="btnyz">
+                                <img src="../img/yxyz@2x.png" width="27" height="31">
+                                <p>点击完成验证</p>
+                            </button>
+                            <p class="text2">请先进行安全验证</p>
+                            <div class="kong"></div>
+                        </div>
+
+                        <!--立即注册-->
+                        <input id="intsubmit" type="submit" value="立即注册">
+                        <div class="kong"></div>
+                        <!--条款-->
+                        <div class="inttk">
+                            <input id="inttk1" type="checkbox" value="checkbox1" checked="checked">&nbsp;
+                            <label class="inttkl1" for="inttk1">
+                                同时开通QQ空间
+                            </label>
+                            <br>
+                            <input id="inttk2" type="checkbox" value="checkbox2" checked="checked">&nbsp;
+                            <label class="inttkl2" for="inttk2">
+                                我已阅读并同意相关服务条款和隐藏政策&nbsp;&nbsp;&nbsp;
+                            </label>
+                            <div class="tkyc">
+                                <div class="tkyc1"><img class="tkycimg" src="../img/sanjiao@2x.png" width="16" height="10"></div>
+                                <div class="tkyc2">
+                                    <div class="bai"></div>
+                                    <a href="javascript:void (0)">《QQ号码规则》</a><br>
+                                    <a href="javascript:void (0)">《QQ空间服务协议》</a><br>
+                                    <a href="javascript:void (0)">《隐私政策》</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Copyright © 1998-2016 Tencent All Rights Reserved 腾讯公司 版权所有</p>
+    </div>
+</body>
+</html>

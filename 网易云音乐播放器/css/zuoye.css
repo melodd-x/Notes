@@ -1,0 +1,127 @@
+#player{
+    width: 640px;
+    height: 500px;
+    border: 1px solid black;
+    margin: 50px auto 0;
+    background-color: black;
+    position: relative;
+}
+video{
+    width: 640px;
+    display: block;
+    margin-top: 50px;
+}
+.btn{
+    width: 640px;
+    height: 40px;
+    background-color: #201f20;
+    line-height: 40px;
+    margin: 0 auto;
+    /*border: 1px solid #201f20;*/
+    position: absolute;
+    top:460px;
+    user-select: none;
+}
+#play{
+    color: #cdc5cd;
+    margin-left: 20px;
+    float: left;
+}
+#play:hover{
+    color: #f1e9f1;
+    cursor: pointer;
+}
+#time{
+    color: #efefef;
+    font-size: 12px;
+    line-height: 40px;
+    margin-left: 15px;
+    float: left;
+}
+#vol{
+    color: #cdc5cd;
+    margin-left: 240px;
+    float: left;
+}
+#vol:hover{
+    color: #f1e9f1;
+}
+#volchang{
+    width: 100px;
+    height: 8px;
+    background-color: #010101;
+    border-radius: 4px;
+    float: left;
+    margin:16px 0 16px 20px;
+    position: relative;
+}
+#volchang #color{
+    height: 8px;
+    width: 50px;
+    background-color: #ff0d20;
+    border-radius: 4px;
+}
+#circle{
+    width: 4px;
+    height: 4px;
+    background-color: #ff0d20;
+    border: 5px solid #efefef;
+    border-radius: 50%;
+    position: absolute;
+    top:-3px;
+    left: 43px;
+}
+#full{
+    color: #cdc5cd;
+    margin-right: 10px;
+    float: right;
+}
+#full:hover{
+    color: #efefef;
+}
+#qingqi{
+    color: #cdc5cd;
+    margin-right: 30px;
+    float: right;
+}
+#qingqi span{
+    font-size: 14px;
+    font-family: 楷体;
+    margin-left: 10px;
+}
+#wangyi{
+    color: #ff0d20;
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    user-select: none;
+}
+#wangyi span{
+    font-family: 楷体;
+    margin-left: 10px;
+    color: rgba(226, 218, 226, 0.86);
+}
+#jindu{
+    width: 640px;
+    height: 8px;
+    background-color: rgba(205,197,205,0.86);
+    position: absolute;
+    top:452px;
+
+}
+#jindu #yiwan{
+    height: 8px;
+    width: 4px;
+    background-color: red;
+}
+#jindu #now{
+    width: 6px;
+    height: 6px;
+    background-color: #ff0d20;
+    border: 6px solid #efefef;
+    border-radius: 50%;
+    position: absolute;
+    top:-5px;
+    left: 0;
+}

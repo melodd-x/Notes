@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>京东轮播图</title>
+    <script src="jss/jquery-3.1.1.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .page{
+            width: 730px;
+            height: 454px;
+            margin: 50px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .page img{
+            position: absolute;
+        }
+        .page img~img{
+            display: none;
+        }
+        .page ul{
+            list-style: none;
+            position: absolute;
+            top:420px;
+            left: 300px;
+        }
+        .page ul li{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #d5d3d9;
+            display: inline-block;
+            text-align: center;
+            line-height: 20px;
+        }
+        .page ul li:nth-child(1){
+            background-color: #d9310d;
+            color: white;
+        }
+        .page div{
+            width: 50px;
+            height: 80px;
+            font-size: 56px;
+            font-weight: bold;
+            color: white;
+            background-color: rgba(104, 104, 105, 0.47);
+            text-align: center;
+            line-height: 80px;
+            position: absolute;
+            display: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .page .left{
+            top: 190px;
+            left: 0;
+        }
+        .page .right{
+            top: 190px;
+            right: 0;
+        }
+        .page div:hover{
+            cursor: pointer;
+        }
+        .page .left:hover{
+            background-color: rgba(40,40,41,0.47);
+        }
+        .page .right:hover{
+            background-color: rgba(40,40,41,0.47);
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <img src="images/focus.jpg" alt="photo"/>
+        <img src="images/focus1.jpg" alt="photo"/>
+        <img src="images/focus2.jpg" alt="photo"/>
+        <img src="images/focus3.jpg" alt="photo"/>
+        <img src="images/focus4.jpg" alt="photo"/>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <div class="left"><</div>
+        <div class="right">></div>
+    </div>
+
+    <script>
+//        $(function () {
+//            var i=0;
+//            var settime="";
+//            var lunbo=function () {
+//                $(".page img:eq("+i+")").css({
+//                    "display":"none"
+//                });
+//                $(".page ul li:eq("+i+")").css({
+//                    "background-color":"#d5d3d9",
+//                    "color":"black"
+//                });
+//                i++;
+//                if(i==5){i=0;}
+//                $(".page img:eq("+i+")").css("display","block");
+//                $(".page ul li:eq("+i+")").css({
+//                    "background-color":"#d9310d",
+//                    "color":"white"
+//                });
+//                settime=setTimeout(lunbo,2000);
+//            };
+//            settime=setTimeout(lunbo,2000);
+//            $(".page img,.page div").mouseover(function () {
+//                clearTimeout(settime);
+//                $(".page div").css("display","block");
+//            }).mouseout(function () {
+//                settime=setTimeout(lunbo,2000);
+//                $(".page div").css("display","none");
+//            });
+//            $(".page ul li").click(function () {
+//                var n=$(".page ul li").index(this);
+//                $(".page img").css("display","none");
+//                $(".page ul li").css({"background-color":"#d5d3d9","color":"black"});
+//                $(".page img:eq("+n+")").css("display","block");
+//                $(this).css({"background-color":"#d9310d","color":"white"});
+//                i=n;
+//            })
+//            $(".page .left").click(function () {
+//                $(".page img").css("display","none");
+//                $(".page ul li").css({"background-color":"#d5d3d9","color":"black"});
+//                i--;
+//                if(i==-1){i=4;}
+//                $(".page img:eq("+i+")").css("display","block");
+//                $(".page ul li:eq("+i+")").css({"background-color":"#d9310d","color":"white"});
+//            });
+//            $(".page .right").click(function () {
+//                $(".page img").css("display","none");
+//                $(".page ul li").css({"background-color":"#d5d3d9","color":"black"});
+//                i++;
+//                if(i==5){i=0;}
+//                $(".page img:eq("+i+")").css("display","block");
+//                $(".page ul li:eq("+i+")").css({"background-color":"#d9310d","color":"white"});
+//            })
+//        })
+
+
+        $(function () {
+            var i=0;
+            var settime="";
+            var lunbo=function () {
+                $(".page ul li:eq("+i+")").css({"background-color":"#d5d3d9", "color":"black"});
+                $(".page img:eq("+i+")").animate({"left":"-730px","opacity":0},500,function () {
+                    $(this).css({"display":"none","left":0,"opacity":1});
+                });
+                i++;
+                if(i==5){i=0;}
+                $(".page ul li:eq("+i+")").css({"background-color":"#d9310d", "color":"white"});
+                $(".page img:eq("+i+")").css({"left":"730px","display":"block"}).animate({"left":0},500);
+                settime=setTimeout(lunbo,1500);
+            };
+            settime=setTimeout(lunbo,1500);
+            $(".page img,.page div,.page ul li").mouseover(function () {
+                $(".page img").stop(false,true);
+                clearTimeout(settime);
+                $(".page div").css("display","block");
+            }).mouseout(function () {
+                settime=setTimeout(lunbo,1500);
+                $(".page div").css("display","none");
+            });
+            $(".page ul li").click(function () {
+                var n=$(".page ul li").index(this);
+                $(".page img").css("display","none");
+                $(".page ul li").css({"background-color":"#d5d3d9","color":"black"});
+                $(".page img:eq("+n+")").css("display","block");
+                $(this).css({"background-color":"#d9310d","color":"white"});
+                i=n;
+            })
+            $(".page .left").click(function () {
+                $(".page img").stop(false,true);
+                $(".page ul li:eq("+i+")").css({"background-color":"#d5d3d9", "color":"black"});
+                $(".page img:eq("+i+")").animate({"left":"730px","opacity":0},500,function () {
+                    $(this).css({"display":"none","left":0,"opacity":1});
+                });
+                i--;
+                if(i==-1){i=4;}
+                $(".page ul li:eq("+i+")").css({"background-color":"#d9310d", "color":"white"});
+                $(".page img:eq("+i+")").css({"left":"-730px","display":"block"}).animate({"left":0},500);
+            });
+            $(".page .right").click(function () {
+                $(".page img").stop(false,true);
+                $(".page ul li:eq("+i+")").css({"background-color":"#d5d3d9", "color":"black"});
+                $(".page img:eq("+i+")").animate({"left":"-730px","opacity":0},500,function () {
+                    $(this).css({"display":"none","left":0,"opacity":1});
+                });
+                i++;
+                if(i==5){i=0;}
+                $(".page ul li:eq("+i+")").css({"background-color":"#d9310d", "color":"white"});
+                $(".page img:eq("+i+")").css({"left":"730px","display":"block"}).animate({"left":0},500);
+            })
+        })
+    </script>
+</body>
+</html>

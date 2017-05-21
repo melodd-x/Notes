@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>canvas刮刮乐</title>
+    <style media="screen">
+        canvas{
+            display: block;
+            margin: 80px auto;
+            border: 1px solid rgb(233, 43, 123);
+            background: #c9c9c9;
+            background-size: 320px 160px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="320" height="160">
+        浏览器版本太低，无法支持canvas
+    </canvas>
+
+    <script type="text/javascript">
+        var canvas = document.getElementById("canvas")
+        var ctx = canvas.getContext("2d");
+
+        var unitAng = Math.PI/180;
+        var rd = Math.floor(Math.random()*2);//向下取整，得到0或1
+        var sw = false;
+        var imgsrc = ["01.png","02.png"];
+
+        canvas.style.backgroundImage = "url("+imgsrc[rd]+")";
+
+        ctx.fillStyle = "#a2a2a2";
+        ctx.fillRect(0,0,320,160);
+
+        canvas.addEventListener("mousedown",mousedownHandler);
+        canvas.addEventListener("mousemove",mousemoveHandler);
+        canvas.addEventListener("mouseup",mouseupHandler);
+        document.addEventListener("mouseup",mouseupHandler);
+
+        function mousedownHandler(e) {
+            sw = true;
+        }
+        function mousemoveHandler(e) {
+            ctx.globalCompositeOperation = "destination-out";
+            if (sw) {
+                var x = e.pageX-canvas.offsetLeft;
+                var y = e.pageY-canvas.offsetTop;
+                ctx.beginPath();
+                ctx.arc(x,y,10,0,360*unitAng);//画圆
+                ctx.closePath();
+                ctx.fill();
+            }
+        }
+        function mouseupHandler(e) {
+            sw = false;
+        }
+    </script>
+</body>
+</html>
