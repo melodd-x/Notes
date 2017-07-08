@@ -1,0 +1,542 @@
+@charset "UTF-8";
+w*{margin:0;padding: 0;}
+a{
+    list-style: none;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+/*闪电*/
+body{
+    background: #222;
+    animation:sd 16s linear;
+}
+    @keyframes sd{
+        0%{}
+        6%{background:#222;}
+        12%{background:#aaa;}
+        18%{background:#aaa;}
+        25%{background:#fff;}
+        31%{background:#aaa;}
+        37%{background:#aaa;}
+        42%{background:#222;}
+        50%{}
+        62%{background:#222;}
+        63%{background:#aaa;}
+        64%{background:#222;}
+        65%{background:#aaa;}
+        66%{background:#222;}
+        72%{background:#222;}
+        73%{background:#aaa;}
+        74%{background:#222;}
+        75%{background:#aaa;}
+        76%{background:#222;}
+        82%{background:#222;}
+        83%{background:#aaa;}
+        84%{background:#222;}
+        85%{background:#aaa;}
+        86%{background:#222;}
+        100%{}
+    }
+    #oneDay{
+        width: 1000px;
+        height: 500px;
+        margin: 0 auto;
+    }
+        /*月亮*/
+    .moon{
+        width:60px;
+        height:60px;
+        margin:-250px 0 0 50px;
+        padding:10px;
+        border-radius:41px;
+        box-shadow:0 0 10px rgba(204,102,0,.8);
+        background:-moz-linear-gradient(top,#fff,#F6D66E);
+        background:#F6D66E;visibility: hidden;
+        animation:moon 8s linear ;
+        animation-delay:8s;
+        transition:all 1s ease-in;
+    }
+    @keyframes moon{
+        0%{transform:translate(-10px,50px);visibility: visible;}
+        12%{transform:translate(80px,-25px);}
+        25%{transform:translate(200px,-50px);}
+        38%{transform:translate(320px,-75px);}
+        50%{transform:translate(400px,-85px);}
+        62%{transform:translate(480px,-75px);}
+        75%{transform:translate(600px,-50px);}
+        87%{transform:translate(720px,-25px);}
+        100%{transform:translate(800px,0);}
+    }
+    .lei{
+        width:60px;
+        height:60px;
+        margin:0px 0 0 20px;
+        padding:10px;
+        border-radius:41px;
+        background: #222;
+        visibility: hidden;
+        animation:lei 16s linear;
+    }
+    @keyframes lei{
+        0%{visibility: hidden;}
+        50%{visibility: hidden;}
+        62%{background:#222;visibility: visible;}
+        63%{background:#aaa;}
+        64%{background:#222;}
+        65%{background:#aaa;}
+        66%{background:#222;}
+        72%{background:#222;}
+        73%{background:#aaa;}
+        74%{background:#222;}
+        75%{background:#aaa;}
+        76%{background:#222;}
+        82%{background:#222;}
+        83%{background:#aaa;}
+        84%{background:#222;}
+        85%{background:#aaa;}
+        86%{background:#222;}
+        100%{}
+    }
+    /*太阳*/
+    .sun{
+        width:60px;
+        height:60px;
+        margin:150px 0 0 50px;
+        padding:10px;
+        border-radius:41px;
+        box-shadow:0 0 10px rgba(204,102,0,.8);
+        background:-moz-linear-gradient(top,#fff,#F6D66E);
+        background:#F6D66E;
+        visibility: hidden;
+        animation:sun 8s linear ;
+        transition:all 1s ease-in;
+    }
+    @keyframes sun{
+        0%{transform:translate(0,0);visibility: visible;}
+        12%{transform:translate(80px,-28px);background:-moz-linear-gradient(top,#fff,#F6666E);background:#F6666E ;}
+        25%{transform:translate(200px,-56px);background:-moz-linear-gradient(top,#fff,#F6166E);background:#F6166E ;}
+        38%{transform:translate(320px,-84px);background:-moz-linear-gradient(top,#fff,#F6162E);background:#F6162E ;}
+        50%{transform:translate(400px,-112px);background:-moz-linear-gradient(top,#fff,#F60000);background:#F60000 ;}
+        62%{transform:translate(480px,-84px);background:-moz-linear-gradient(top,#fff,#F6162E);background:#F6162E ;}
+        75%{transform:translate(600px,-56px);background:-moz-linear-gradient(top,#fff,#F6166E);background:#F6166E ;}
+        87%{transform:translate(720px,-28px);background:-moz-linear-gradient(top,#fff,#F6666E);background:#F6666E ;}
+        100%{transform:translate(800px,0);}
+    }
+    /*山*/
+    .s1{
+        height: 60px;
+        width: 40px;
+        background: #093;
+        border-radius: 50px 0 0 0 ;
+        float: left;
+        position: relative;
+        top: 40px;
+    }
+    .s2{
+        height: 100px;
+        width: 80px;
+        background: #093;
+        border-radius: 50px 50px 0 0 ;
+        float: left;
+    }
+    .s3{
+        height: 60px;
+        width: 100px;
+        background: #093;
+        border-radius: 0 100px 0 0;
+        float: left;
+        position: relative;
+        top: 40px;
+    }
+
+
+
+
+
+
+
+
+    /*家*/
+    .f1{
+        height: 180px;
+        width: 180px;
+        float: left;
+        background: #03f;
+        transform-origin:50% 50%;
+        transform:rotate(45deg);
+        position: relative;
+        left: 100px;
+        top: -50px;
+    }
+    .f2{
+        height: 150px;
+        width: 255px;
+        background: #761234;
+        position: relative;
+        float: left;
+        left: -117px;
+        top: 40px;
+    }
+    .f2 .f2_top{
+        height:100px;
+        width:90px ;
+        border:3px solid #111;
+        position:absolute;
+        top:8px;
+        left:15px;
+        background:#eee;
+    }
+    .f2 .f2_bottom{
+        width:60px;
+        height:110px;
+        border:3px solid #111 ;
+        float:right;
+        margin:25px 20px 0 0;
+        background:#eee;
+    }
+    .f3{
+        width: 0;
+        height: 0;
+        border-bottom: 100px solid red;
+        border-left: 100px solid transparent;
+        float: left;
+        border-right: 100px solid transparent;
+        border-radius: 0 0 40px 40px;
+    }
+
+    ul{
+        position: fixed;
+        top: 100px;
+    }
+    .rain1{
+        position: fixed;
+        top: 150px;
+        left: 30px;
+    }
+    .rain li{
+        height: 10px;
+        width: 0px;
+        border: 1px solid #0dd;
+        transform-origin:50% 50%;
+        transform:rotate(20deg);
+        list-style: none;
+        margin-left: 60px;
+        float: left;
+        animation:xiayu 2s linear 4;
+        visibility: hidden;
+        animation-delay:8s;
+    }
+    @keyframes xiayu{
+        0%{transform:translate(0px,0px);visibility: visible;}
+        25%{transform:translate(-50px,100px);}
+        50%{transform:translate(-100px,200px);}
+        75%{transform:translate(-150px,300px);}
+        100%{transform:translate(-200px,400px);}
+    }
+
+    .rain1 li{
+        visibility:hidden;
+        height: 10px;
+        width: 0px;
+        border: 1px solid #0dd;
+        transform-origin:50% 50%;
+        transform:rotate(20deg);
+        list-style: none;
+        margin-left: 60px;
+        float: left;
+        animation:xiayuone 2s linear 4;
+        animation-delay:9s;
+    }
+
+    @keyframes xiayuone{
+        0%{visibility: visible;}
+        25%{transform:translate(-50px,100px);}
+        50%{transform:translate(-100px,200px);}
+        75%{transform:translate(-150px,300px);}
+        100%{transform:translate(-200px,400px);}
+    }
+
+    .rain2 li {
+        visibility:hidden;
+        height: 10px;
+        width: 0px;
+        border: 1px solid #0dd;
+        transform-origin:50% 50%;
+        transform:rotate(20deg);
+        list-style: none;
+        margin-left: 60px;
+        float: left;
+        animation:xiayutwo 2s linear 4;
+        animation-delay:9.5s;
+    }
+    @keyframes xiayutwo{
+        0%{visibility: visible;}
+        25%{transform:translate(-50px,100px);}
+        50%{transform:translate(-100px,200px);}
+        75%{transform:translate(-150px,300px);}
+        100%{transform:translate(-200px,400px);}
+    }
+/* 小明同学 */
+    .head{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #edd;
+        position: relative;
+        margin-left: 470px;
+        margin-top: 80px;
+        animation:go 16s linear;
+        border-top: 3px solid #000
+}
+    @keyframes go{
+        0%{transform:translate(0 0);}
+        25%{transform:translate(150px,10px);}
+        50%{transform:translate(300px,20px);}
+        75%{transform:translate(150px,10px);}
+        100%{transform:translate(0px,0px);}
+    }
+    .eye{
+    width: 8px;
+    height: 6px;
+    border-radius: 3px;
+    background: #000;
+    position: relative;
+    top: 8px;
+    animation:eye 16s linear;
+}
+    @keyframes eye{
+        0%{transform:translate(17px,0px);}
+        49%{transform:translate(17px,0px);}
+        50%{transform:translate(0px,0px);}
+        99%{transform:translate(0px,0px);}
+        100%{transform:translate(0px,0px);}
+    }
+
+
+    .neck{
+    width: 5px;
+    height: 10px;
+    background: #edd;
+    margin-left: -3px;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+}
+    .body{
+    width: 20px;
+    height: 60px;
+    border-radius: 10px;
+    background: #ff0;
+    position: absolute;
+    bottom: -55px;
+    left:-8px;
+    z-index: 5;
+}
+    .shoulder{
+    width: 16px;
+    height: 12px;
+    border-radius: 8px;
+    background: #edd;
+    margin-left: 2px
+}
+
+    .leftArm{
+    visibility: hidden;
+    border-bottom: 3px solid #000;
+    width: 5px;
+    height: 50px;
+    background: #ede;
+    border-radius: 3px;
+    margin-top: -3px;
+    margin-left: 9px;
+    z-index: -1;
+    -webkit-transform-origin: 0 0;
+    transform:rotate(40deg);
+    animation:armLeft 2s linear 4;
+}
+
+    @keyframes armLeft{
+        0%{transform:rotate(-40deg);visibility: visible;}
+        25%{transform:rotate(40deg);}
+        50%{transform:rotate(-40deg);}
+        75%{transform:rotate(40deg);}
+        100%{transform:rotate(-40deg);visibility:hidden;}
+    }
+
+    .rightArm_back{
+    border-bottom:3px solid #000;
+    height: 20px;
+    width: 5px;
+    background:#ede;
+    border-radius: 3px;
+    transform-origin:0 0;
+    transform:rotate(120deg);
+    position: absolute;
+    top: 15px;animation:yugebo 16s;
+}
+
+    @keyframes yugebo{
+                0%{visibility: hidden;}
+                51%{visibility: hidden;}
+                52%{visibility: visible;}
+                100%{visibility: visible;}
+            }
+
+
+    .sangan{
+        width: 5px;
+        height: 100px;
+        background: #444;
+        border-radius: 3px;
+        -webkit-transform-origin: 0 0;
+        transform:rotate(60deg);
+        margin-left: 10px;
+        margin-top: 9px;
+    }
+    .santou{
+        position: absolute;
+        top: 107px;
+        right: -148px;
+        padding-top: 1px;
+        width: 100px;
+        height: 30px;
+        border-radius: 50px 50px 0 0;
+        background: #777;
+        -webkit-transform-origin: 0 0;
+        transform:rotate(180deg);
+    }
+    .santoutou{
+        width: 60px;
+        height: 40px;
+        border-radius: 20px 20px 0 0;
+        background: #777;
+        margin-top: -10px;
+        margin-left: 20px ;
+    }
+    .rightArm{
+        border-bottom:3px solid #000;
+        height: 50px;
+        width: 5px;
+        background:#ede;
+        z-index: 12;
+        border-radius: 3px;
+        transform-origin:0 0;
+        transform:rotate(-40deg);
+        margin-left: 9px;
+        margin-top: -47px;
+        animation:rightArm 2s linear 8;
+    }
+    @keyframes rightArm{
+        0%{transform:rotate(40deg);}
+        25%{transform:rotate(-40deg);}
+        50%{transform:rotate(40deg);}
+        75%{transform:rotate(-40deg);}
+        100%{transform:rotate(40deg);}
+    }
+
+    .pp{
+        width: 20px;
+        height: 10px;
+        background: #0fe;
+        border-radius: 10px;
+        margin-top: -11px;
+        margin-bottom: 2px;
+    }
+    .lt{
+        border-bottom:5px solid #000;
+        height: 70px;
+        width: 8px;
+        background: #0fe;
+        border-radius: 10px;
+        float: left;
+        transform-origin:0 0;
+        animation:lt 2s linear 8;
+        margin-top: 3px;
+    }
+
+    @keyframes lt{
+        0%{transform:rotate(-30deg);}
+        25%{transform:rotate(30deg);}
+        50%{transform:rotate(-30deg);}
+        75%{transform:rotate(30deg);}
+        100%{transform:rotate(-30deg);}
+    }
+    .rt{
+        border-bottom:5px solid #000;
+        height: 70px;
+        width: 8px;
+        background: #0fe;
+        border-radius: 10px;
+        float: right;
+        transform-origin:0 0;
+        animation:rt 2s linear 8;
+        margin-top: 3px;
+    }
+    @keyframes rt{
+        0%{transform:rotate(30deg);}
+        25%{transform:rotate(-30deg);}
+        50%{transform:rotate(30deg);}
+        75%{transform:rotate(-30deg);}
+        100%{transform:rotate(30deg);}
+    }
+
+
+
+
+
+/*闪电云*/
+    .cl{
+        background: #A8A8A8;
+        visibility: hidden;
+        animation:sdCloud 16s;
+    }
+
+    @keyframes sdCloud{
+        0%{visibility: hidden}
+        50%{visibility: hidden}
+        62%{background:#222;visibility: hidden;}
+        63%{background:#A8A8A8;visibility: visible;}
+        64%{background:#222;}
+        65%{background:#A8A8A8;}
+        66%{background:#222;}
+        72%{background:#222;}
+        73%{background:#A8A8A8;}
+        74%{background:#222;}
+        75%{background:#A8A8A8;}
+        76%{background:#222;}
+        82%{background:#222;}
+        83%{background:#A8A8A8;}
+        84%{background:#222;}
+        85%{background:#A8A8A8;}
+        86%{background:#222;}
+        100%{}
+    }
+/*云朵*/
+    .cloud{
+        position: fixed;
+        top:50px;
+        left: 400px;
+    }
+    .cloud1{
+        height: 60px;
+        width: 40px;
+        border-radius: 50px 0 0 50px ;
+        float: left;
+        position: relative;
+        top: 40px;
+    }
+    .cloud2{
+        height: 100px;
+        width: 80px;
+        border-radius: 50px 50px 0 0 ;
+        float: left;
+    }
+    .cloud3{
+        height: 60px;
+        width: 100px;
+        border-radius: 0 100px 100px 0;
+        float: left;
+        position: relative;
+        top: 40px;
+    }
